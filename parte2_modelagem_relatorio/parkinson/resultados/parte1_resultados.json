@@ -1,0 +1,230 @@
+{
+ "t1": 10,
+ "t2": 60,
+ "val_tab": [
+  {
+   "faixa": "0%-10%",
+   "contagem_total": 9,
+   "pct_total": 5.921052631578947,
+   "contagem_positivos": 0,
+   "pct_positivos_na_faixa": 0.0
+  },
+  {
+   "faixa": "10%-20%",
+   "contagem_total": 5,
+   "pct_total": 3.289473684210526,
+   "contagem_positivos": 2,
+   "pct_positivos_na_faixa": 40.0
+  },
+  {
+   "faixa": "20%-30%",
+   "contagem_total": 4,
+   "pct_total": 2.631578947368421,
+   "contagem_positivos": 2,
+   "pct_positivos_na_faixa": 50.0
+  },
+  {
+   "faixa": "30%-40%",
+   "contagem_total": 6,
+   "pct_total": 3.9473684210526314,
+   "contagem_positivos": 4,
+   "pct_positivos_na_faixa": 66.66666666666666
+  },
+  {
+   "faixa": "40%-50%",
+   "contagem_total": 7,
+   "pct_total": 4.605263157894736,
+   "contagem_positivos": 6,
+   "pct_positivos_na_faixa": 85.71428571428571
+  },
+  {
+   "faixa": "50%-60%",
+   "contagem_total": 6,
+   "pct_total": 3.9473684210526314,
+   "contagem_positivos": 5,
+   "pct_positivos_na_faixa": 83.33333333333334
+  },
+  {
+   "faixa": "60%-70%",
+   "contagem_total": 6,
+   "pct_total": 3.9473684210526314,
+   "contagem_positivos": 6,
+   "pct_positivos_na_faixa": 100.0
+  },
+  {
+   "faixa": "70%-80%",
+   "contagem_total": 12,
+   "pct_total": 7.894736842105263,
+   "contagem_positivos": 11,
+   "pct_positivos_na_faixa": 91.66666666666666
+  },
+  {
+   "faixa": "80%-90%",
+   "contagem_total": 31,
+   "pct_total": 20.394736842105264,
+   "contagem_positivos": 29,
+   "pct_positivos_na_faixa": 93.54838709677419
+  },
+  {
+   "faixa": "90%-100%",
+   "contagem_total": 66,
+   "pct_total": 43.42105263157895,
+   "contagem_positivos": 51,
+   "pct_positivos_na_faixa": 77.27272727272727
+  }
+ ],
+ "test_tab": [
+  {
+   "faixa": "0%-10%",
+   "contagem_total": 0,
+   "pct_total": 0.0,
+   "contagem_positivos": 0,
+   "pct_positivos_na_faixa": 0.0
+  },
+  {
+   "faixa": "10%-20%",
+   "contagem_total": 0,
+   "pct_total": 0.0,
+   "contagem_positivos": 0,
+   "pct_positivos_na_faixa": 0.0
+  },
+  {
+   "faixa": "20%-30%",
+   "contagem_total": 2,
+   "pct_total": 4.651162790697675,
+   "contagem_positivos": 0,
+   "pct_positivos_na_faixa": 0.0
+  },
+  {
+   "faixa": "30%-40%",
+   "contagem_total": 2,
+   "pct_total": 4.651162790697675,
+   "contagem_positivos": 0,
+   "pct_positivos_na_faixa": 0.0
+  },
+  {
+   "faixa": "40%-50%",
+   "contagem_total": 2,
+   "pct_total": 4.651162790697675,
+   "contagem_positivos": 1,
+   "pct_positivos_na_faixa": 50.0
+  },
+  {
+   "faixa": "50%-60%",
+   "contagem_total": 1,
+   "pct_total": 2.3255813953488373,
+   "contagem_positivos": 0,
+   "pct_positivos_na_faixa": 0.0
+  },
+  {
+   "faixa": "60%-70%",
+   "contagem_total": 5,
+   "pct_total": 11.627906976744185,
+   "contagem_positivos": 3,
+   "pct_positivos_na_faixa": 60.0
+  },
+  {
+   "faixa": "70%-80%",
+   "contagem_total": 8,
+   "pct_total": 18.6046511627907,
+   "contagem_positivos": 6,
+   "pct_positivos_na_faixa": 75.0
+  },
+  {
+   "faixa": "80%-90%",
+   "contagem_total": 10,
+   "pct_total": 23.25581395348837,
+   "contagem_positivos": 8,
+   "pct_positivos_na_faixa": 80.0
+  },
+  {
+   "faixa": "90%-100%",
+   "contagem_total": 13,
+   "pct_total": 30.23255813953488,
+   "contagem_positivos": 13,
+   "pct_positivos_na_faixa": 100.0
+  }
+ ],
+ "met_val": {
+  "t1": 10,
+  "t2": 60,
+  "n_total": 152,
+  "total_positivos": 116,
+  "total_negativos": 36,
+  "faixas": {
+   "negativo_automatico": {
+    "contagem": 9,
+    "pct_populacao": 5.921052631578947,
+    "contagem_positivos": 0,
+    "contagem_negativos": 9,
+    "proporcao_positivos_na_faixa": 0.0,
+    "proporcao_negativos_na_faixa": 100.0
+   },
+   "analise_manual": {
+    "contagem": 28,
+    "pct_populacao": 18.421052631578945,
+    "contagem_positivos": 19,
+    "contagem_negativos": 9,
+    "proporcao_positivos_na_faixa": 67.85714285714286,
+    "proporcao_negativos_na_faixa": 32.142857142857146
+   },
+   "positivo_automatico": {
+    "contagem": 115,
+    "pct_populacao": 75.6578947368421,
+    "contagem_positivos": 97,
+    "contagem_negativos": 18,
+    "proporcao_positivos_na_faixa": 84.34782608695653,
+    "proporcao_negativos_na_faixa": 15.65217391304348
+   }
+  },
+  "proporcao_positivos_em_negativo_automatico": 0.0,
+  "proporcao_negativos_em_positivo_automatico": 50.0,
+  "denominadores": {
+   "pct_populacao": "N_total do conjunto avaliado (todas as instancias)",
+   "proporcao_positivos_na_faixa / proporcao_negativos_na_faixa": "contagem_faixa (numero de instancias daquela faixa)",
+   "proporcao_positivos_em_negativo_automatico": "total de positivos reais no conjunto avaliado (~ taxa de falso negativo)",
+   "proporcao_negativos_em_positivo_automatico": "total de negativos reais no conjunto avaliado (~ taxa de falso positivo)"
+  }
+ },
+ "met_test": {
+  "t1": 10,
+  "t2": 60,
+  "n_total": 43,
+  "total_positivos": 31,
+  "total_negativos": 12,
+  "faixas": {
+   "negativo_automatico": {
+    "contagem": 0,
+    "pct_populacao": 0.0,
+    "contagem_positivos": 0,
+    "contagem_negativos": 0,
+    "proporcao_positivos_na_faixa": 0.0,
+    "proporcao_negativos_na_faixa": 0.0
+   },
+   "analise_manual": {
+    "contagem": 7,
+    "pct_populacao": 16.27906976744186,
+    "contagem_positivos": 1,
+    "contagem_negativos": 6,
+    "proporcao_positivos_na_faixa": 14.285714285714285,
+    "proporcao_negativos_na_faixa": 85.71428571428571
+   },
+   "positivo_automatico": {
+    "contagem": 36,
+    "pct_populacao": 83.72093023255815,
+    "contagem_positivos": 30,
+    "contagem_negativos": 6,
+    "proporcao_positivos_na_faixa": 83.33333333333334,
+    "proporcao_negativos_na_faixa": 16.666666666666664
+   }
+  },
+  "proporcao_positivos_em_negativo_automatico": 0.0,
+  "proporcao_negativos_em_positivo_automatico": 50.0,
+  "denominadores": {
+   "pct_populacao": "N_total do conjunto avaliado (todas as instancias)",
+   "proporcao_positivos_na_faixa / proporcao_negativos_na_faixa": "contagem_faixa (numero de instancias daquela faixa)",
+   "proporcao_positivos_em_negativo_automatico": "total de positivos reais no conjunto avaliado (~ taxa de falso negativo)",
+   "proporcao_negativos_em_positivo_automatico": "total de negativos reais no conjunto avaliado (~ taxa de falso positivo)"
+  }
+ }
+}
