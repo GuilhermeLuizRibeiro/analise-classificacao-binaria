@@ -50,6 +50,7 @@ def gerar_grafico_e_metricas(
 
     proba_pct = _converter_para_percentual(y_proba_bruta)
     n_total = proba_pct.size
+    total_positivos = int((y_true_arr == 1).sum())
 
     limites_faixas = _definir_intervalos(bin_width)
     rotulos_faixas = [_formatar_rotulo_da_faixa(limites_faixas[i], limites_faixas[i + 1]) for i in range(len(limites_faixas) - 1)]
@@ -77,7 +78,10 @@ def gerar_grafico_e_metricas(
     )
 
     pct_populacao_por_faixa = qtd_total_por_faixa / n_total * 100.0
-    pct_positivos_sobre_populacao = qtd_positivos_por_faixa / n_total * 100.0
+    if total_positivos > 0:
+        pct_positivos_do_total_de_positivos = qtd_positivos_por_faixa / total_positivos * 100.0
+    else:
+        pct_positivos_do_total_de_positivos = qtd_positivos_por_faixa * 0.0
     qtd_total_por_faixa_np = qtd_total_por_faixa.to_numpy(dtype=float)
     qtd_positivos_por_faixa_np = qtd_positivos_por_faixa.to_numpy(dtype=float)
     with np.errstate(invalid="ignore", divide="ignore"):
@@ -94,6 +98,7 @@ def gerar_grafico_e_metricas(
             "pct_populacao_por_faixa": pct_populacao_por_faixa.to_numpy(),
             "qtd_positivos_por_faixa": qtd_positivos_por_faixa.to_numpy(),
             "pct_positivos_na_faixa": pct_positivos_na_faixa,
+            "pct_positivos_do_total_de_positivos": pct_positivos_do_total_de_positivos.to_numpy(),
         }
     )
 
@@ -101,9 +106,9 @@ def gerar_grafico_e_metricas(
     x = np.arange(len(rotulos_faixas))
     largura_barras = 0.4
     ax.bar(x - largura_barras / 2, pct_populacao_por_faixa.to_numpy(), width=largura_barras,
-           color="tab:blue", label="Todas as instâncias (%)")
-    ax.bar(x + largura_barras / 2, pct_positivos_sobre_populacao.to_numpy(), width=largura_barras,
-           color="tab:red", label="Rótulo real positivo (%)")
+           color="tab:blue", label="Todas as instâncias (% do total de instâncias)")
+    ax.bar(x + largura_barras / 2, pct_positivos_do_total_de_positivos.to_numpy(), width=largura_barras,
+           color="tab:red", label="Rótulo real positivo (% do total de positivos)")
 
     if t1 is not None and t2 is not None:
         for valor_corte, rotulo_corte in ((t1, "t1"), (t2, "t2")):
@@ -115,7 +120,7 @@ def gerar_grafico_e_metricas(
     ax.set_xticks(x)
     ax.set_xticklabels(rotulos_faixas, rotation=45, ha="right")
     ax.set_xlabel("Probabilidade estimada da classe positiva")
-    ax.set_ylabel("% das instâncias do conjunto avaliado")
+    ax.set_ylabel("Percentual (%)")
     ax.set_title("Distribuição das probabilidades estimadas, por faixa")
     ax.legend()
     fig.tight_layout()
@@ -125,7 +130,6 @@ def gerar_grafico_e_metricas(
         if t1 >= t2:
             raise ValueError("t1 deve ser menor que t2.")
 
-        total_positivos = int((y_true_arr == 1).sum())
         total_negativos = int((y_true_arr == 0).sum())
 
         mask_neg_auto = proba_pct < t1
